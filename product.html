@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .cart a {
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+            /* color: rgb(226, 228, 228); */
+            font-size: xx-large;
+            text-decoration: none;
+           display: flex;
+           justify-content: right;
+           padding: 20px;
+           margin-top: -100px;
+        }
+    </style>
 </head>
+
 <body>
     <div>
         <p>sort by price </p>
-        <select name="" id="choise">sort by price 
+        <select name="" id="choise">sort by price
             <option value="hol">high to low</option>
             <option value="loh">low to high</option>
         </select>
     </div>
     <div>
         <p>sort by rating </p>
-        <select name="" id="rating">sort by rating 
+        <select name="" id="rating">sort by rating
             <option value="tb">high to low</option>
             <option value="bt">low to high</option>
         </select>
     </div>
-    <div>
+    <div class="cart">
         <a href="cart.html">cart</a>
     </div>
     <div class="contaner">
@@ -31,143 +45,145 @@
 <script>
     var data = [
 
-    {
-      name: "SAMSUNG Galaxy F12",
-      rating: 4,
-      image_url:
-        "https://rukminim1.flixcart.com/image/312/312/kn22m4w0/mobile/a/q/8/galaxy-f12-sm-f127gzgiins-samsung-original-imagftmjw3xqg4yk.jpeg?q=70",
-      price: 11499,
-    },
-    {
-      name: "SAMSUNG Galaxy F42",
-      rating: 4.2,
-      image_url:
-        "https://rukminim1.flixcart.com/image/312/312/ku4ezrk0/mobile/v/5/e/galaxy-f42-5g-sm-e426bzahins-samsung-original-imag7anfwxsgumgz.jpeg?q=70",
-      price: 12199,
-    },
-    {
-      name: "Apple Iphone 12",
-      rating: 4.6,
-      image_url:
-        "https://rukminim1.flixcart.com/image/312/312/kg8avm80/mobile/r/h/z/apple-iphone-12-dummyapplefsn-original-imafwg8dqgncgbcb.jpeg?q=70",
-      price: 59999,
-    },
-    {
-      name: "APPLE iPhone 12 Mini",
-      rating: 4.5,
-      image_url:
-        "https://rukminim1.flixcart.com/image/312/312/kg8avm80/mobile/d/g/b/apple-iphone-12-mini-dummyapplefsn-original-imafwgbfhfevaajh.jpeg?q=70",
-      price: 49999,
-    },
-    {
-      name: "OPPO A12",
-      rating: 3.8,
-      image_url:
-        "https://rukminim1.flixcart.com/image/312/312/kb1470w0/mobile/q/g/g/oppo-a12-cph2083-original-imafsh2hfkyamqyt.jpeg?q=70",
-      price: 9490,
-    },
-    {
-      name: "ASUS ROG Phone 3",
-      rating: 4.9,
-      image_url:
-        "https://rukminim1.flixcart.com/image/312/312/kcuug7k0/mobile/g/h/e/asus-rog-phone-3-zs661ks-6a006in-original-imaftwc6nmyuyekd.jpeg?q=70",
-      price: 46999,
-    },
-    {
-      name: "DIZO Star 300",
-      rating: 3.4,
-      image_url:
-        "https://rukminim1.flixcart.com/image/312/312/kqpj4i80/mobile/e/i/r/star-300-dh2001-dizo-original-imag4nmpv7zahzs2.jpeg?q=70",
-      price: 1299,
-    },
-    {
-      name: "Micromax IN Note 1 ",
-      rating: 4.4,
-      image_url:
-        "https://rukminim1.flixcart.com/image/312/312/ku5ufm80/mobile/v/t/1/in-note-1-e7746-micromax-original-imag7cdgz6tqychm.jpeg?q=70",
-      price: 10999,
-    },
-    {
-      name: "SAMSUNG Galaxy Z Fold3 5G",
-      rating: 4,
-      image_url:
-        "https://rukminim1.flixcart.com/image/312/312/ksqeky80/mobile/x/7/1/galaxy-z-fold3-5g-sm-f926bzgdinu-samsung-original-imag68q6hpdwmngw.jpeg?q=70",
-      price: 149999,
-    },
-  ];
-  localStorage.setItem('mobileDetails',JSON.stringify(data))
-  var store = JSON.parse( localStorage.getItem('mobileDetails'));
-  function display(){
-store.forEach(ele => {
-    var box =document.createElement('div');
-    var image =document.createElement('img');
-    image.src= ele.image_url;
+        {
+            name: "SAMSUNG Galaxy F12",
+            rating: 4,
+            image_url:
+                "https://rukminim1.flixcart.com/image/312/312/kn22m4w0/mobile/a/q/8/galaxy-f12-sm-f127gzgiins-samsung-original-imagftmjw3xqg4yk.jpeg?q=70",
+            price: 11499,
+        },
+        {
+            name: "SAMSUNG Galaxy F42",
+            rating: 4.2,
+            image_url:
+                "https://rukminim1.flixcart.com/image/312/312/ku4ezrk0/mobile/v/5/e/galaxy-f42-5g-sm-e426bzahins-samsung-original-imag7anfwxsgumgz.jpeg?q=70",
+            price: 12199,
+        },
+        {
+            name: "Apple Iphone 12",
+            rating: 4.6,
+            image_url:
+                "https://rukminim1.flixcart.com/image/312/312/kg8avm80/mobile/r/h/z/apple-iphone-12-dummyapplefsn-original-imafwg8dqgncgbcb.jpeg?q=70",
+            price: 59999,
+        },
+        {
+            name: "APPLE iPhone 12 Mini",
+            rating: 4.5,
+            image_url:
+                "https://rukminim1.flixcart.com/image/312/312/kg8avm80/mobile/d/g/b/apple-iphone-12-mini-dummyapplefsn-original-imafwgbfhfevaajh.jpeg?q=70",
+            price: 49999,
+        },
+        {
+            name: "OPPO A12",
+            rating: 3.8,
+            image_url:
+                "https://rukminim1.flixcart.com/image/312/312/kb1470w0/mobile/q/g/g/oppo-a12-cph2083-original-imafsh2hfkyamqyt.jpeg?q=70",
+            price: 9490,
+        },
+        {
+            name: "ASUS ROG Phone 3",
+            rating: 4.9,
+            image_url:
+                "https://rukminim1.flixcart.com/image/312/312/kcuug7k0/mobile/g/h/e/asus-rog-phone-3-zs661ks-6a006in-original-imaftwc6nmyuyekd.jpeg?q=70",
+            price: 46999,
+        },
+        {
+            name: "DIZO Star 300",
+            rating: 3.4,
+            image_url:
+                "https://rukminim1.flixcart.com/image/312/312/kqpj4i80/mobile/e/i/r/star-300-dh2001-dizo-original-imag4nmpv7zahzs2.jpeg?q=70",
+            price: 1299,
+        },
+        {
+            name: "Micromax IN Note 1 ",
+            rating: 4.4,
+            image_url:
+                "https://rukminim1.flixcart.com/image/312/312/ku5ufm80/mobile/v/t/1/in-note-1-e7746-micromax-original-imag7cdgz6tqychm.jpeg?q=70",
+            price: 10999,
+        },
+        {
+            name: "SAMSUNG Galaxy Z Fold3 5G",
+            rating: 4,
+            image_url:
+                "https://rukminim1.flixcart.com/image/312/312/ksqeky80/mobile/x/7/1/galaxy-z-fold3-5g-sm-f926bzgdinu-samsung-original-imag68q6hpdwmngw.jpeg?q=70",
+            price: 149999,
+        },
+    ];
+    localStorage.setItem('mobileDetails', JSON.stringify(data))
+    var store = JSON.parse(localStorage.getItem('mobileDetails'));
+    var cart;
+    function display() {
+        store.forEach((ele, i) => {
+            var box = document.createElement('div');
+            var image = document.createElement('img');
+            image.src = ele.image_url;
 
-    var name =document.createElement('h1');
-    name.innerText=ele.name;
+            var name = document.createElement('h1');
+            name.innerText = ele.name;
 
-    var price =document.createElement('h2');
-    price.innerText=ele.price;
-    price.setAttribute('id' ,'priced')
+            var price = document.createElement('h2');
+            price.innerText = ele.price;
+            price.setAttribute('id', 'priced')
 
-    var rating =document.createElement('h2');
-    rating.innerText= ele.rating;
-    rating.setAttribute('id' ,'rtr');
+            var rating = document.createElement('h2');
+            rating.innerText = ele.rating;
+            rating.setAttribute('id', 'rtr');
 
-    var btn =document.createElement('button');
-    btn.innerText ='Add to Cart';
-    btn.setAttribute('id' ,'btn');
+            var btn = document.createElement('button');
+            btn.innerText = 'Add to Cart';
+            btn.setAttribute('id', 'btn');
 
-    box.append(image ,name ,price, rating, btn);
-    document.querySelector('.contaner').append(box);
-    console.log(box)
-    btn.addEventListener('click', () => {
+            box.append(image, name, price, rating, btn);
+            document.querySelector('.contaner').append(box);
+            console.log(box)
+
+            btn.addEventListener('click', () => {
                 if (localStorage.getItem('userCarts') == null) {
-                    cartData = [];
+                    cart = [];
                 } else {
-                    cartData = JSON.parse(localStorage.getItem('userCarts'));
+                    cart = JSON.parse(localStorage.getItem('userCarts'));
                 }
 
-                cartData.push((storeData[i]));
-                localStorage.setItem('userCarts', JSON.stringify(cartData));
-                console.log(JSON.parse(localStorage.getItem('menUserCarts')), JSON.parse(localStorage.getItem('userName')));
+                cart.push((store[i]));
+                localStorage.setItem('userCarts', JSON.stringify(cart));
             })
 
-    
-});
-}
 
-document.querySelector('#choise').addEventListener('change', ()=>{
-    var changes =document.querySelector('#choise').value;
-    store.sort(function(a,b){
-        if(changes == 'hol'){
-            return b.price - a.price;
-        }
-        else if(changes == 'loh'){
-            return a.price -b.price;
-        }
+        });
+    }
+
+    document.querySelector('#choise').addEventListener('change', () => {
+        var changes = document.querySelector('#choise').value;
+        store.sort(function (a, b) {
+            if (changes == 'hol') {
+                return b.price - a.price;
+            }
+            else if (changes == 'loh') {
+                return a.price - b.price;
+            }
+        })
+        // console.log(store)
+        display(store);
     })
-    // console.log(store)
-    display(store);
-})
 
 
 
-document.querySelector('#rating').addEventListener('change', ()=>{
-    var changes =document.querySelector('#rating').value;
-    store.sort(function(a,b){
-        if(changes == 'tb'){
-            return b.rating - a.rating;
-        }
-        else if(changes == 'bt'){
-            return a.rating -b.rating;
-        }
+    document.querySelector('#rating').addEventListener('change', () => {
+        var changes = document.querySelector('#rating').value;
+        store.sort(function (a, b) {
+            if (changes == 'tb') {
+                return b.rating - a.rating;
+            }
+            else if (changes == 'bt') {
+                return a.rating - b.rating;
+            }
+        })
+        // console.log(store)
+        display(store);
     })
-    // console.log(store)
-    display(store);
-})
 
 
 //  if()
 </script>
+
 </html>
